@@ -86,7 +86,7 @@ const displayWeather = function (weather, searchCity) {
     getUvIndex(lat, lon)
 }
 
-const getUvIndex = function (let, lon) {
+const getUvIndex = function (lat, lon) {
     let apiKey = "32d30234af0ce628a4f925069a3437c0"
     let apiURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`
     fetch(apiURL)
