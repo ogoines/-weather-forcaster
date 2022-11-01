@@ -127,26 +127,7 @@ const displayUvIndex = function(index){
     weatherContainerEl.appendChild(uvIndexEl);
 }
  
-const displayUvIndex = function(index){
-    var uvIndexEl = document.createElement("div");
-    uvIndexEl.textContent = "UV Index: "
-    uvIndexEl.classList = "list-group-item"
 
-    uvIndexValue = document.createElement("span")
-    uvIndexValue.textContent = index.value
-
-    if(index.value <=2){
-        uvIndexValue.classList = "favorable"
-    }else if(index.value >2 && index.value<=8){
-        uvIndexValue.classList = "moderate "
-    }
-    else if(index.value >8){
-        uvIndexValue.classList = "severe"
-    };
-
-    uvIndexEl.appendChild(uvIndexValue);
-    weatherContainerEl.appendChild(uvIndexEl);
-}
 
 const get5Day = function(city){
     var apiKey = "844421298d794574c100e3409cee0499"
@@ -195,4 +176,44 @@ const get5Day = function(city){
         }
     
     }
+
+
+
+    
+const formerSearchHandler = function(event){
+    var city = event.target.getAttribute("data-city")
+    if(city){
+        getCityWeather(city);
+        get5Day(city);
+    }
+}
+
+cityFormEl.addEventListener("submit", formSumbitHandler);
+formerSearchButtonEl.addEventListener("click", formerSearchHandler);
+    
+const formerSearch = function(formerCity){
+ 
+    // console.log(formerCity)
+
+    formerSearchEl = document.createElement("button");
+    formerSearchEl.textContent = formerCity;
+    formerSearchEl.classList = "d-flex w-100 btn-light border p-2";
+    formerSearchEl.setAttribute("data-city", formerCity)
+    formerSearchEl.setAttribute("type", "submit");
+
+    formerSearchButtonEl.prepend(formerSearchEl);
+}
+
+
+const formerSearchHandler = function(event){
+    var city = event.target.getAttribute("data-city")
+    if(city){
+        getCityWeather(city);
+        get5Day(city);
+    }
+}
+
+cityFormEl.addEventListener("submit", formSumbitHandler);
+formerSearchButtonEl.addEventListener("click", formerSearchHandler);
+
     
