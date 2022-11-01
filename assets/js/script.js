@@ -27,11 +27,6 @@ const formSumbitHandler = function(event){
     formerSearch(city);
 }
 
-
-
-
-
-
 //weather api fetch request
 const getCityWeather = function(city){
    
