@@ -1,5 +1,5 @@
 const cities = [];
-const apiKey = "a1c7a7af15659b1e452ec5d6407cfadf"
+const apiKey = ""
 const cityFormEl=document.querySelector("#city-search-form");
 const cityInputEl=document.querySelector("#city");
 const weatherContainerEl=document.querySelector("#current-weather-container");
