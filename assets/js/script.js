@@ -12,7 +12,20 @@ const formerSearchButtonEl = document.querySelector("#former-search-buttons");
 
 
 
-
+const formSumbitHandler = function(event){
+    event.preventDefault();
+    var city = cityInputEl.value.trim();
+    if(city){
+        getCityWeather(city);
+        get5Day(city);
+        cities.unshift({city});
+        cityInputEl.value = "";
+    } else{
+        alert("Pllease enter a City");
+    }
+    saveSearch();
+    formerSearch(city);
+}
 
 
 
