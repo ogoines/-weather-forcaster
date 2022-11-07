@@ -1,0 +1,29 @@
+.search-column{
+    background-color:	#70796736;
+}
+
+.list-group-item{
+    line-height: .5;
+    border: none;
+}
+.card-body{
+    flex:auto
+}
+
+span.severe{
+    padding: 3px;
+    background-color: red;
+    color:white;
+}
+
+span.moderate{
+    padding: 3px;
+    background-color: yellow;
+}
+
+span.favorable{
+    padding: 3px;
+    background-color: rgb(1, 4, 1);
+    color:white;
+}
+
