@@ -18,6 +18,7 @@ conditions such as the temperature, the humidity, the wind speed and the UV inde
 
 ## Usage
 
+Checkout the Weather Forecast!
 [![Get the Weather](assets/images/weather.png)](https://ogoines.github.io/weather-forecaster/)
 
 ## License
